@@ -3,7 +3,7 @@ package products;
 public class NoteBook extends Product{
     private int pageCount;
     private boolean isHardCover;
-    private int count = 0; //counting for ID
+    private static int count = 0; //counting for ID
 
 
     public NoteBook(String title, double price, int pageCount, boolean isHardCover){
@@ -19,7 +19,7 @@ public class NoteBook extends Product{
 
     @Override
     protected String generateID() {
-        return "200" + count;
+        return "2" + String.format("%03d", count);
     }
 
     //setters and getters

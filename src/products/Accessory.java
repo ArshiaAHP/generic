@@ -2,7 +2,7 @@ package products;
 
 public class Accessory extends Product{
     private String Color;
-    private int count = 0;//counting for ID
+    private static int count = 0;//counting for ID
 
     public Accessory(String title, double price, String color) {
         super(title, price);
@@ -12,7 +12,7 @@ public class Accessory extends Product{
 
     @Override
     protected String generateID() {
-        return "300" + count;
+        return "3" + String.format("%03d", count);
     }
 
     //setters and getters

@@ -4,7 +4,7 @@ public class Book extends Product{
     private String author;
     private String publication;
     private String genre;
-    private int count = 0;//counting for ID
+    private static int count = 1;//counting for ID
     public Book(String title, double price, String author, String publication, String genre){
         super(title, price);
         this.author = author;
@@ -20,7 +20,7 @@ public class Book extends Product{
 
     @Override
     protected String generateID() {
-        return "100" + count;
+        return "1" + String.format("%03d", count);
     }
 
 
