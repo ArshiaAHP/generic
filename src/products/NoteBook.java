@@ -3,7 +3,7 @@ package products;
 public class NoteBook extends Product{
     private int pageCount;
     private boolean isHardCover;
-    private int count = 0;
+    private int count = 0; //counting for ID
 
 
     public NoteBook(String title, double price, int pageCount, boolean isHardCover){

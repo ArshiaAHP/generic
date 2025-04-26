@@ -4,7 +4,7 @@ public class Book extends Product{
     private String author;
     private String publication;
     private String genre;
-    private int count = 0;
+    private int count = 0;//counting for ID
     public Book(String title, double price, String author, String publication, String genre){
         super(title, price);
         this.author = author;

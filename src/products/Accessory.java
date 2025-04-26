@@ -1,0 +1,26 @@
+package products;
+
+public class Accessory extends Product{
+    private String Color;
+    private int count = 0;//counting for ID
+
+    public Accessory(String title, double price, String color) {
+        super(title, price);
+        this.Color = color;
+        count++;
+    }
+
+    @Override
+    protected String generateID() {
+        return "300" + count;
+    }
+
+    //setters and getters
+    public String getColor() {
+        return Color;
+    }
+
+    public void setColor(String color) {
+        Color = color;
+    }
+}
