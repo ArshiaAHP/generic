@@ -9,9 +9,10 @@ public class Inventory <T extends Product>{
 
     public void applyDiscount (String productName, int discount){
         for(T product: items){
-            if(productName.equals(product.getTitle())){
+            if(product.getTitle().equals(productName)){
                 double newPrice = product.getPrice() * (100 - discount) / 100;
                 product.setPrice(newPrice);
+                return;
             }
         }
         throw new RuntimeException("Product with given name not found.");
@@ -29,6 +30,7 @@ public class Inventory <T extends Product>{
         for(T product : items){
             if(product.getId().equals(id)){
                 items.remove(product);
+                break;
             }
         }
     }
