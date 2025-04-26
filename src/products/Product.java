@@ -11,7 +11,7 @@ public abstract class Product {
     }
 
     public String toString(){
-        return title + " | " + price + " | " + id;
+        return title + " | " + price;
     }
 
     protected abstract String generateID();
